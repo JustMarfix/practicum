@@ -2,7 +2,7 @@ name: Compile and release PDF on push
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     runs-on: ubuntu-latest
