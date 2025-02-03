@@ -225,7 +225,9 @@
   glues_to: ("Теорема", "Лемма", "Доказательство")
 )
 #let def = make_theorem("Определение", color: def_color)
-#let solve = make_theorem("Решение", color: solve_color)
+#let solve = make_theorem("Решение", color: solve_color, glues_to: (
+  "Пример",
+))
 #let prop = make_theorem("Свойство", th_type_plural: "Свойства", color: oth_color)
 #let props = prop.with(plural: true)
 #let notice = make_theorem("Замечание", highlight_color: proof_color)
@@ -233,7 +235,7 @@
     highlight_color: def_color.lighten(25%), glues_to: (
     "Теорема", "Лемма", "Предложение", "Следствие", 
     "Свойство", "Свойства", "Замечание", "Определение",
-    "Доказательство", "Обозначение",
+    "Доказательство", "Обозначение", "Решение"
 ))
 #let examples = example.with(plural: true)
 #let exercise = make_theorem("Упражнение", highlight_color: proof_color)
