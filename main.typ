@@ -1,4 +1,5 @@
 #import "utils/core.typ": notes
+#import "config.typ"
 
 #show: notes.with(
   name: "Конспекты практикумов к ЕГЭ по профильной математике",
@@ -9,4 +10,6 @@
 
 #include "sections/01-parameters/!sec.typ"
 
-#include "appendix.typ"
+#if config.appendix {
+  include "appendix.typ"
+}
