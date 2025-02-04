@@ -60,9 +60,6 @@
 
 #solve[
   $
-    6 log_0.25 (sin x) + a^2 + 6a + 8 = a log_4 (sin x)
-  $
-  $
     (a + 6) log_4(sin x) = a^2 + 6a + 8
   $
 
