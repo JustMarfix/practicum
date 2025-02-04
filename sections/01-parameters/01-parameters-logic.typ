@@ -73,7 +73,11 @@
 
     grid((12,0), (16,4), help-lines: true)
     line((13, 3), (15, 1))
-    line(stroke: (dash: "dashed", paint: red), (13, 3), (15,1))
+    let clr = red
+    if config.monochrome {
+      clr = luma(50%)
+    }
+    line(stroke: (dash: "dashed", paint: clr), (13, 3), (15,1))
   })
   
   Для решения этой задачи нам подходит лишь один случай -- с полным пересечением.

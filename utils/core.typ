@@ -217,6 +217,7 @@
 
 #let magic = make_theorem("Магия какая-то", color: magic_color)
 #let th = make_theorem("Теорема", color: th_color)
+#let theory = make_theorem("Теория", color: th_color)
 #let lemma = make_theorem("Лемма", color: th_color)
 #let pr = make_theorem("Предложение", color: oth_color)
 #let follow = make_theorem(
@@ -227,7 +228,8 @@
 #let def = make_theorem("Определение", color: def_color)
 #let solve = make_theorem("Решение", color: solve_color, glues_to: (
   "Пример", "Задача"
-))
+), th_type_plural: "Решения")
+#let solves = solve.with(plural: true)
 #let prop = make_theorem("Свойство", th_type_plural: "Свойства", color: oth_color)
 #let props = prop.with(plural: true)
 #let notice = make_theorem("Замечание", highlight_color: proof_color)
@@ -237,9 +239,11 @@
     "Свойство", "Свойства", "Замечание", "Определение",
     "Доказательство", "Обозначение"
 ))
-#let task = make_theorem("Задача", th_type_plural: "Задачи", 
+#let task = make_theorem("Задача",
+    th_type_plural: "Задачи", 
     highlight_color: def_color.lighten(25%)
 )
+#let tasks = task.with(plural: true)
 
 #let examples = example.with(plural: true)
 #let exercise = make_theorem("Упражнение", highlight_color: proof_color)
